@@ -20,4 +20,8 @@ Run npm install
 
 Run npm start
 
+for Login:
+email:"user@gmail.com"
+password:"password"
+
 
