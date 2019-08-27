@@ -1,0 +1,46 @@
+
+<div class="newOrderdiv">
+</div>
+
+<div class="container">
+    <div class="row">
+      <div class="col-12">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">Order Number</th>
+              <th scope="col">Order Due Date</th>
+              <th scope="col">Customer Buyer Name</th>
+              <th scope="col">Customer Address</th>
+              <th scope="col">Customer Phone</th>
+              <th scope="col">Order Total</th>
+              <th scope="col">Actions</th>
+              <th scope="col">
+    <button type="button" class="btn btn-primary" (click)="newOrder()"><i class="far fa-eye"></i>New Order</button>
+    
+              </th>
+
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor='let d of Data'>
+              <th scope="row">{{d.OrderNumber}}</th>
+              <td>{{d.OrderDueDate}}</td>
+              <td>{{d.CustomerBuyerName}}</td>
+              <td>{{d.CustomerAddress}}</td>
+              <td>{{d.CustomerPhone}}</td>
+              <td>{{d.TotalOrder}}</td>
+              <td>
+                  
+                <button type="button" class="btn btn-success" (click)="onEditClick($event,d.OrderNumber)"><i class="fas fa-edit"></i>Edit</button>
+              <button type="button" class="btn btn-danger" (click)="onDeletClick($event, d.OrderNumber)"><i class="far fa-trash-alt"></i>Delete</button>
+              </td>
+            </tr>
+           
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  

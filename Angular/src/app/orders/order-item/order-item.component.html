@@ -1,0 +1,73 @@
+<div class="row justify-content-center">
+    <div class="col-md-4 register-employee">
+      <div class="card-body">
+        <form [formGroup]="createOrderForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="inputName">Order Number</label>
+                <input class="form-control" type="text" formControlName="orderNumber">
+                <!-- error -->
+                <div *ngIf="createOrderForm.controls['orderNumber'].invalid && (createOrderForm.controls['orderNumber'].dirty || createOrderForm.controls['orderNumber'].touched)" class=" left alert alert-danger">
+                   <div *ngIf="createOrderForm.controls['orderNumber'].errors.required">
+                     Order Number is required.
+                   </div>
+                 </div>
+                
+              </div>
+              <div class="form-group">
+                  <label for="inputName">Order Due_Date</label>
+                  <input class="form-control" type="date" formControlName="orderDueDate">
+                  <!-- error -->
+                <div *ngIf="createOrderForm.controls['orderDueDate'].invalid && (createOrderForm.controls['orderDueDate'].dirty || createOrderForm.controls['orderDueDate'].touched)" class=" left alert alert-danger">
+                    <div *ngIf="createOrderForm.controls['orderDueDate'].errors.required">
+                      Order Due_Date is required.
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputName">Order Buyer_Name</label>
+                    <input class="form-control" type="text" formControlName="orderBuyerName">
+                   <!-- error -->
+                <div *ngIf="createOrderForm.controls['orderBuyerName'].invalid && (createOrderForm.controls['orderBuyerName'].dirty || createOrderForm.controls['orderBuyerName'].touched)" class=" left alert alert-danger">
+                    <div *ngIf="createOrderForm.controls['orderBuyerName'].errors.required">
+                      Order Buyer_Name is required.
+                    </div>
+                  </div>
+                  </div>
+                  <div class="form-group">
+                      <label for="inputName">Customer Address</label>
+                      <input class="form-control" type="text" formControlName="customerAdd">
+                      <!-- error -->
+                <div *ngIf="createOrderForm.controls['customerPhone'].invalid && (createOrderForm.controls['customerPhone'].dirty || createOrderForm.controls['customerPhone'].touched)" class=" left alert alert-danger">
+                    <div *ngIf="createOrderForm.controls['customerPhone'].errors.required">
+                      Customer Address is required.
+                    </div>
+                  </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputName">Customer Phone</label>
+                        <input class="form-control" type="text" formControlName="customerPhone">
+                       <!-- error -->
+                <div *ngIf="createOrderForm.controls['customerPhone'].invalid && (createOrderForm.controls['customerPhone'].dirty || createOrderForm.controls['customerPhone'].touched)" class=" left alert alert-danger">
+                    <div *ngIf="createOrderForm.controls['customerPhone'].errors.required">
+                      Customer Phone is required.
+                    </div>
+                  </div>
+                      </div>
+          <div class="form-group">
+            <label for="inputName">Order Total</label>
+            <input class="form-control" type="text" formControlName="orderTotal">
+           <!-- error -->
+           <div *ngIf="createOrderForm.controls['orderTotal'].invalid && (createOrderForm.controls['orderTotal'].dirty || createOrderForm.controls['orderTotal'].touched)" class=" left alert alert-danger">
+              <div *ngIf="createOrderForm.controls['orderTotal'].errors.required">
+                Order Total is required.
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success btn-lg btn-block" type="submit">Create  Order</button>
+          </div>
+        </form>
+  
+      </div>
+    </div>
+  </div>

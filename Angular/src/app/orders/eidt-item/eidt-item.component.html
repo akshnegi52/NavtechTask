@@ -1,0 +1,43 @@
+<div class="row justify-content-center">
+  <div class="col-md-4 register-employee">
+   
+    <div class="card-body">
+      <form [formGroup]="editOrderForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="inputName">Order Number</label>
+          <input class="form-control" type="text" formControlName="orderNumber" > 
+        </div>
+
+        <div class="form-group">
+          <label for="inputName">Order Due_Date</label>
+          <input class="form-control" type="date" formControlName="orderDueDate">
+
+        </div>
+        <div class="form-group">
+          <label for="inputName">Order Buyer_Name</label>
+          <input class="form-control" type="text" formControlName="orderBuyerName">
+
+        </div>
+        <div class="form-group">
+          <label for="inputName">Customer Address</label>
+          <input class="form-control" type="text" formControlName="customerAdd">
+
+        </div>
+        <div class="form-group">
+          <label for="inputName">Customer Phone</label>
+          <input class="form-control" type="text" formControlName="customerPhone">
+
+        </div>
+        <div class="form-group">
+          <label for="inputName">Order Total</label>
+          <input class="form-control" type="text" formControlName="orderTotal">
+          <!-- error -->
+
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success btn-lg btn-block" type="submit">Update Order</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
